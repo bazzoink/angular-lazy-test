@@ -1,6 +1,6 @@
 <!doctype html>
 
-<html lang="en" ng-app="uiRouterSample">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title ng-bind="$state.current.name + ' - ui-router'">ui-router</title>
@@ -15,15 +15,14 @@
       $state full url = {{ $state.$current.url.source }}
     </pre>
 
-    <!-- Angular and UI Router-->
+    <!--
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
     <script src="//angular-ui.github.io/ui-router/release/angular-ui-router.js"></script>
-
-    <!-- Lazy load and ui-router-extras -->
     <script src="app/assets/ocLazyLoad.min.js"></script>
     <script src="app/assets/ct-ui-router-extras.min.js"></script>
-
-    <!-- Base app -->
     <script src="app/app.js"></script>
+    -->
+
+    <script data-main="app/config" src="app/assets/require.min.js"></script>
   </body>
 </html>

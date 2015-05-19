@@ -1,17 +1,25 @@
-angular.module('uiRouterSample.contacts', [
-  'ui.router'
-])
+define([
+    'angular',
+    'angularUiRouter',
+], function (angular) {
+    'use strict';
 
-.config(
-  [
-    '$stateProvider',
-    '$urlRouterProvider',
-    function ($stateProvider,   $urlRouterProvider) {
-      $stateProvider
-        .state('contacts', {
-          url: '/contacts',
-          templateUrl: 'app/contacts/contacts.html',
-        })
-    }
-  ]
-);
+    angular.module('uiRouterSample.contacts', [
+      'ui.router'
+    ])
+    .config(
+      [
+        '$stateProvider',
+        '$urlRouterProvider',
+        function ($stateProvider,   $urlRouterProvider) {
+          $stateProvider
+            .state('contacts', {
+              url: '/contacts',
+              templateUrl: 'app/contacts/contacts.html',
+              controller: 'uiRouterSample.contacts.contactsCtrl'
+            })
+        }
+      ]
+    );
+});
+
